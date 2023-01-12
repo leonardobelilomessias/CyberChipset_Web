@@ -1,7 +1,7 @@
 import { Avatar, Card,Text,Col, Row, Container, Image, Spacer, Grid } from "@nextui-org/react";
 import Back from '../../../public/images/risk.jpg'
 
-export function Comments(){
+export  function Comments(){
   const img = "https://static.vecteezy.com/system/resources/previews/004/256/658/original/five-star-customer-product-ratings-review-flat-icons-for-apps-and-websites-illustration-of-five-golden-yellow-stars-in-a-row-isolated-in-a-white-background-concepts-for-ratings-customers-review-free-vector.jpg"
   return(
     <Container justify="center" alignItems="center" css={{backgroundImage:`url(${Back.src})`, backgroundSize:"cover",py:100}}>

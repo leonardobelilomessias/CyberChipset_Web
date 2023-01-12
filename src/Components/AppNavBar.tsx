@@ -74,7 +74,7 @@ export function AppNavbar(){
 
     <Navbar  shouldHideOnScroll={false} isBordered variant="sticky" css={{ backgroundColor:"white",boxSizing:"border-box"}} >
     <Navbar.Brand css={{  display:"flex",flex:1, backgroundColor:"white",boxSizing:"border-box","@sm":{ flex:0 }}} >
-      <Navbar.Toggle   onClick={()=>setShowMenu(!showMenu)}  showIn={"xs"}/>
+      <Navbar.Toggle  isSelected={showMenu}   onClick={()=>setShowMenu(!showMenu)}  showIn={"xs"}/>
       <Image objectFit='contain' width={200}  src={Logo.src}/>
     </Navbar.Brand>
       <Navbar.Collapse  isOpen={!!showMenu}>

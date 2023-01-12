@@ -1,14 +1,15 @@
+import { Comments } from "../../Components/Home/Comments";
+import { FeatureBusiness } from "../../Components/Home/FeaturesBusiness";
+import { Hero } from "../../Components/Home/Hero";
+import { InfoAbouteSites } from "../../Components/Home/InfoAboutSites";
+import { QuestionAnswers } from "../../Components/Home/QuentionsAnswers";
+import { SolutionCustumer } from "../../Components/Home/SolutionCustumer";
+import Price from "../price";
 
-import {  Hero } from "./Hero";
-import { InfoAbouteSites } from "./InfoAboutSites";
-import { Comments } from "./Comments";
-import { Price } from "./Price";
-import { QuestionAnswers } from "./QuentionsAnswers";
-import { FeatureBusiness } from "./FeaturesBusiness";
-import { SolutionCustumer } from "./SolutionCustumer";
 
 
-export  function Home(){
+
+export default function Home(){
 
   return(
     <>

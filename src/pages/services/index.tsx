@@ -1,12 +1,11 @@
-import { Card, Col, Container, Grid, Row, Spacer, Text } from "@nextui-org/react";
-import { Globe } from "phosphor-react";
-import { Learn } from "./Learn";
-import { BannerServices } from "./BannerService";
-import { FeatureServices } from "./FeatureServices";
-import { HeaderServices } from "./HeaderServices";
-import { InfoGrid } from "./InfoGrid";
-import { Consult}  from './Consult'
-import { GridtypeSites } from "./GridTypeSites";
+import { Container } from "@nextui-org/react";
+import { BannerServices } from "../../Components/Services/BannerService";
+import { Consult } from "../../Components/Services/Consult";
+import { FeatureServices } from "../../Components/Services/FeatureServices";
+import { GridtypeSites } from "../../Components/Services/GridTypeSites";
+import { HeaderServices } from "../../Components/Services/HeaderServices";
+import { Learn } from "../../Components/Services/Learn";
+
 
 
 export default function Service(){

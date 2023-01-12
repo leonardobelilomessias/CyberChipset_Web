@@ -1,5 +1,5 @@
 import { styled } from "@nextui-org/react"
-import { Home } from "../pages/Home";
+import Home  from "../pages/Home";
 
 export const Box = styled("div", {
   boxSizing: "border-box",

@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import { Inter } from '@next/font/google'
 import { Footer } from '../Components/Footer'
-import { Home } from './Home'
+import  Home  from './Home'
 import { AppNavbar } from '../Components/AppNavBar'
 const inter = Inter({ subsets: ['latin'] })
 
