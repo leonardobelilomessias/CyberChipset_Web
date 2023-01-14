@@ -1,10 +1,11 @@
-import { Collapse,Container,Spacer,Text } from "@nextui-org/react" 
+import { Collapse,Container,Spacer,Text,Col } from "@nextui-org/react" 
 export function QuestionAnswers(){
   return(
-    <Container css={{maxWidth:"1224px"}}>
-    <Spacer/>
+    <Container css={{maxWidth:"1224px", mt:200}}>
+      <Col  css={{ mt:100,mb:100}}>
     <Text h2 weight={"bold"} css={{textAlign:"center"}}>
       Perguntas Frequentes
+    <Spacer/>
     </Text>
       <Collapse.Group>
       <Collapse title="Quanto tempo para o desenvolvimento?">
@@ -34,6 +35,7 @@ export function QuestionAnswers(){
       </Collapse>
     </Collapse.Group>
     <Spacer y={3}/>
+      </Col>
     </Container>
   )
 

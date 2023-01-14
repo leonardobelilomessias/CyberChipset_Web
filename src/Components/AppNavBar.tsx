@@ -45,7 +45,7 @@ const BoxMenu =styled("div",{
 
 export function AppNavbar(){
   const pathname = usePathname();
-  console.log(pathname)
+
   const collapseItems = [
     {title:"Pagina Inicial",link:"/"},
     {title:"Serviços",link:"/services"},
@@ -61,7 +61,7 @@ export function AppNavbar(){
     //   const ele = document.getElementsByClassName("nextui-c-gpbAMl-iPooNr-isExpanded-true")[0]
     // ele.classList.remove("nextui-c-gpbAMl-iPooNr-isExpanded-true")
     
-   console.log("defaultProps?.isSelected")
+
     document.getElementsByTagName("body")[0].style.overflow = ''
     setTimeout(() => {
       setShowMenu(!showMenu)
@@ -70,11 +70,10 @@ export function AppNavbar(){
   }
   return(
     
-    <>
 
-    <Navbar  shouldHideOnScroll={false} isBordered variant="sticky" css={{ backgroundColor:"white",boxSizing:"border-box"}} >
+    <Navbar  variant={"static"}  css={{ backgroundColor:"transparent",boxSizing:"border-box", width:"100vw"}} >
     <Navbar.Brand css={{  display:"flex",flex:1, backgroundColor:"white",boxSizing:"border-box","@sm":{ flex:0 }}} >
-      <Navbar.Toggle  isSelected={showMenu}   onClick={()=>setShowMenu(!showMenu)}  showIn={"xs"}/>
+      <Navbar.Toggle  isSelected={showMenu}  onClick={()=>setShowMenu(!showMenu)}   showIn={"xs"}/>
       <Image objectFit='contain' width={200}  src={Logo.src}/>
     </Navbar.Brand>
       <Navbar.Collapse  isOpen={!!showMenu}>
@@ -127,6 +126,6 @@ export function AppNavbar(){
 
         </Navbar.Content>
     </Navbar>
-    </>
+
   )
 }

@@ -43,7 +43,7 @@ export function CardItemHome(item:itemInfoPros){
 </Card.Body>
 <Card.Footer css={{alignContent:"flex-end",justifyContent:"flex-end"}}>
 
-    <Button size={"sm"}>Detalhes</Button>
+    <Text b color="secondary">→ Detalhes</Text>
 
 </Card.Footer>
 </Card>

@@ -4,14 +4,14 @@ import Back from '../../../public/images/risk.jpg'
 export  function Comments(){
   const img = "https://static.vecteezy.com/system/resources/previews/004/256/658/original/five-star-customer-product-ratings-review-flat-icons-for-apps-and-websites-illustration-of-five-golden-yellow-stars-in-a-row-isolated-in-a-white-background-concepts-for-ratings-customers-review-free-vector.jpg"
   return(
-    <Container justify="center" alignItems="center" css={{backgroundImage:`url(${Back.src})`, backgroundSize:"cover",py:100}}>
-  
+    <Container justify="center" alignItems="center" css={{paddingTop:100, paddingBottom:100}} >
+      <Col>
       <Row justify="center">
         
-      <Text span  weight={"bold"} color="white"  css={{textAlign:"center",fontSize:"$4xl"}}> Veja o Comentário de nossos clientes</Text>
+      <Text span  weight={"bold"}   css={{textAlign:"center",fontSize:"$5xl"}}> Veja o Comentário de nossos clientes</Text>
       </Row>
-      <Spacer y={2}/>
-      <Grid.Container justify="center">
+      <Spacer y={6}/>
+      <Grid.Container gap={2} justify="center">
 
         <Grid md={3}>
                   <Card >
@@ -56,7 +56,7 @@ export  function Comments(){
                     <Avatar   size={"lg"}
                                   src="https://i.pravatar.cc/150?u=a44258114e29026702d"
                                   css={{ size: "" }}
-                      />
+                                  />
                     </Row>      
                     <Row>
                         <Col >
@@ -89,7 +89,7 @@ export  function Comments(){
                     <Avatar   size={"lg"}
                                   src="https://i.pravatar.cc/150?u=a14258144e29026702d"
                                   css={{ size: "" }}
-                      />
+                                  />
                     </Row>      
                     <Row>
                         <Col >
@@ -110,7 +110,9 @@ export  function Comments(){
                   </Card>
                 </Grid>
       </Grid.Container>
-      <Spacer/>
+      <Spacer y={10}/>
+    <hr />
+    </Col>
     </Container>
   )
 }

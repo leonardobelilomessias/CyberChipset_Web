@@ -2,7 +2,11 @@ import {  Col, Image, Text, Container, Spacer, Grid,Row, Button } from "@nextui-
 import Colage from '../../../public/images/colage.png'
 export function SolutionCustumer(){
   return(
-    <Container>
+    
+    
+    <Container css={{paddingBottom:100}}>
+      <Col>
+      <Spacer y={2}/>
       <Grid.Container>
         <Grid xs={12} md={6} >
           <Col css={{}}>
@@ -72,6 +76,9 @@ export function SolutionCustumer(){
           </Col>
         </Grid>
       </Grid.Container>
+      <Spacer y={5}/>
+      <hr />
+      </Col>
     </Container>
   )
 }

@@ -17,23 +17,29 @@ export function  FeatureBusiness(){
     {title:"Speed Caching" ,description:"Maxima velocidade em site e aplicativos distribuidos em servidores mais próximo do seus clientes.",src:"https://cdn-icons-png.flaticon.com/512/5692/5692541.png",image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"},
     {title:"Search Engine Optimization",description:"Seja encontrado no google facilmente no google e garanta a maior visibilidade do seu negócio.", src:"https://cdn-icons-png.flaticon.com/512/3670/3670531.png",image:"https://images.unsplash.com/photo-1586125674857-4eb86880905d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"},
     {title:"Business Inteligence",description:"Utilize e explore recursos de inteligência artifícial em suas estratégias e automatize tarefas.",src:"https://cdn-icons-png.flaticon.com/512/6795/6795081.png",image:"https://img.freepik.com/free-photo/designer-using-transparent-digital-tablet-screen-futuristic-technology_53876-105379.jpg?w=1380&t=st=1673132612~exp=1673133212~hmac=013b69126762fbf0cdf47a158c1bf4403b7f5158c3810bfcd4b28e370256dc62"},
-    {title:"Cyber Secutiry",description:"Proteção com certificados SSL contra ataques de cyber criminosos e vírus, garantindo a segurança de seu projeto.",src:"https://cdn-icons-png.flaticon.com/512/3942/3942496.png",image:"https://img.freepik.com/free-photo/beautiful-hacker-girl-working-with-another-dangerous-cyber-criminals-hackers-centre_482257-21839.jpg?w=1380&t=st=1673132688~exp=1673133288~hmac=27696e41af96fd8c9f508051c6a37906062e3d028b5b7603e3893eaf65f7b0c3"}
+    {title:"Cyber Secutiry",description:"Proteção com certificados SSL contra ataques de cyber criminosos e vírus, garantindo a segurança de seu projeto.",src:"https://cdn-icons-png.flaticon.com/512/3942/3942496.png",image:"https://img.freepik.com/free-photo/beautiful-hacker-girl-working-with-another-dangerous-cyber-criminals-hackers-centre_482257-21839.jpg?w=1380&t=st=1673132688~exp=1673133288~hmac=27696e41af96fd8c9f508051c6a37906062e3d028b5b7603e3893eaf65f7b0c3"},
+    {title:"Cyber Secutirys",description:"Proteção com certificados SSL contra ataques de cyber criminosos e vírus, garantindo a segurança de seu projeto.",src:"https://cdn-icons-png.flaticon.com/512/3942/3942496.png",image:"https://img.freepik.com/free-photo/beautiful-hacker-girl-working-with-another-dangerous-cyber-criminals-hackers-centre_482257-21839.jpg?w=1380&t=st=1673132688~exp=1673133288~hmac=27696e41af96fd8c9f508051c6a37906062e3d028b5b7603e3893eaf65f7b0c3"}
   ]
   return(
     <>
-    <Container  alignItems="center" justify="space-around" css={{ background:" linear-gradient(126deg, rgba(238,174,202,0.1) 0%, rgba(223,233,244,0.3) 97%)", backgroundSize:"cover", display:"flex"}}>
+    <Container  alignItems="center" justify="space-around" css={{  backgroundSize:"cover", display:"flex"}}>
      <Col css={{"@md":{
-        padding:70
+       padding:70
       }}}>
+        <hr />
  
-      <Spacer y={2}/>
-      <Text h2 transform="capitalize"  css={{textAlign:"center", fontWeight:"$bold"}}>
-        Criando um negocio inteligente.
+      <Spacer y={5}/>
+      <Row justify="center">
+      <Text color="secondary" size={"$2xl"} weight="bold"> Porque Cyber Cipset?</Text>
+
+      </Row>
+      <Text size={"$5xl"} transform="capitalize"  css={{textAlign:"center", fontWeight:"$bold"}}>
+        Seu projeto com estratégia e inteligencia
       </Text>
-      <Text css={{textAlign:'center'}}>
+      <Text css={{textAlign:'center'}} size="$2xl" color="$gray800" weight="medium">
         Seguindo padroes de alto nivel e processos rigorosos o sucesso do seu negocio é garantido.
+      <Spacer y={5} />
       </Text>
-      <Spacer />
       <Grid.Container gap={3} >
             {InfoItens.map(item=>{
               return(
@@ -45,6 +51,9 @@ export function  FeatureBusiness(){
             })}
       </Grid.Container>
       <Spacer y={3}/>
+          <hr />
+      <Spacer y={3}/>
+
           </Col>
     </Container>
     </>

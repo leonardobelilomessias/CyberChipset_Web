@@ -7,10 +7,11 @@ import { Footer } from '../Components/Footer';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-  <NextUIProvider>
+  <NextUIProvider >
     <AppNavbar/>
     <Component {...pageProps} />
-    <Footer/>
+    <Footer />
+    
   </NextUIProvider>
   )
 }

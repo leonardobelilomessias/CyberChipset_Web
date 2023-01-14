@@ -1,33 +1,33 @@
-import { Container, Card, Row, Text ,Button, Spacer,Image, styled} from "@nextui-org/react";
-import Banner from '../../../public/images/client.jpg'
+import { Container, Card, Row, Text ,Button, Spacer, styled} from "@nextui-org/react";
+import Image from "next/image";
+import Banner from '../../../public/images/client.webp'
 
 const Box = styled("div",{
   width:"100%",
-  minHeight:"100vh",
+
   backgroundColor:"$purple200",
 
   "@md":{
 
     position:"relative",
-    height:"20vh",
-    display:"block"
+
   }
 })
 
 const BoxText = styled("div",{
-  backgroundColor:"white",
+  
   
   background: "rgba(255, 255, 255, 0.4)",
 
   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-  backdropFilter: "blur(5px)",
+  backdropFilter: "blur(15px)",
   webkitBackdropFilter: "blur(5px)",
-  border:" 1px solid rgba(255, 255, 255, 0.3)",
+  border:" 1px solid rgba(255, 255, 255, 0.1)",
   px:"$10",
   "@md":{
     position:"absolute",
     top:110,
-    left:100,
+    left:50,
     width:"45%",
     borderRadius: "16px",
   }
@@ -37,9 +37,12 @@ const BoxImage = styled("div",{
   height:"50vh",
   backgroundColor:"Yellow",
   maxWidth:"100%",
+  backgroundImage:`url(${Banner.src})`,
+  backgroundSize:"cover",
+  backgroundPosition:"center",
   "@md":{
-    backgroundColor:"yellow",
-    height:"100vh"
+    backgroundColor:"$purple200",
+    minHeight:"100vh"
 
   }
 })
@@ -61,24 +64,18 @@ export  function Hero(){
     <Box>
     
       <BoxImage>
-      <Image css={{"@md":{minHeight:"100vh"}}} src={Banner.src}
-                      objectFit="cover"
-                      height={"100%"}
-                      
-                      alt="Relaxing app background">
-                      
-        </Image>
+     
       </BoxImage>
 
     <BoxText css={{  }} >
 
       <Spacer/>
       <Row>
-        <Text  span   css={{"@md":{
-          color:"white",
-            fontSize:24
+        <Text  span weight={"bold"} color={"$purple700"}  size={"$2xl"}  css={{"@md":{
+          
+            fontSize:"$3xl"
           }}}>
-              Desbrave Um universo de oportunidades.
+              Aumente seus Resultados.
         </Text>
         </Row>
       <Row align="center" justify="center">
@@ -93,18 +90,18 @@ export  function Hero(){
           justifyContent:"center",
           alignItems:"center",
           lineHeight:"$xs",
-          textShadow: "5px 8px 15px rgba(0, 0, 0, 0.5)",
+          textShadow: "5px 8px 15px rgba(0, 0, 0, 0.7)",
           "@md":{
-            fontSize:80,
-            textShadow: "5px 5px 15px rgba(0, 0, 0, 0.7)",
+            fontSize:"$6xl",
+            textShadow: "5px 5px 15px rgba(0,0, 0, 0.0)",
           }
         }}
         weight="bold"
         
       >
-        Acelere seus negócios com as 
-        <Text as={"span"} css={{textGradient: "45deg, $blue900 -20%, $purple600 50%",fontSize:50, fontWeight:"$bold" ,"@md":{fontSize:90}}}> tecnologias </Text> mais  
-        <Text as={"span"} css={{textGradient: "45deg, $blue900 -20%, $purple600 50%",fontSize:80, fontWeight:"$bold","@md":{fontSize:90}}}> avançadas </Text> do mercado.
+        Criando projetos com 
+        <Text as={"span"} css={{ color:"$purple600", fontSize:"$5xl", fontWeight:"$bold" ,"@md":{fontSize:"$6xl"}}}> tecnologias </Text> mais  
+        <Text as={"span"}  css={{color:"$purple600",fontSize:"$5xl", fontWeight:"$bold","@md":{fontSize:"$6xl"}}}> avançadas </Text> do mercado.
         <Spacer y={0.5}/>
       </Text>
 
@@ -124,8 +121,8 @@ export  function Hero(){
       <Row align="center" justify="center">
         <Button  shadow  color={"secondary"}   size="xl" >VER EXEMPLOS </Button>
       </Row>
-      <Spacer y={3}/>
 
+      <Spacer  />
     </BoxText >
  
     </Box>

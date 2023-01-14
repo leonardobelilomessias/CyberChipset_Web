@@ -1,20 +1,22 @@
 import { Button, Card, Col, Container, Grid, Row, Spacer, Text } from "@nextui-org/react";
 
-export function Price(){
+export function PricesHome(){
   return(
 
  
       <Container css={{mb:100 }} >
   
+      <Col css={{mb:100 }} >
+     
+        
+      <Row css={{mt:100 }}justify="center">
 
-      <Row justify="center">
-
-        <Text weight={"bold"} color={"black"} css={{textAlign:"center",mt:50 }} h2>
-          Escolha seu tipo de Projeto
+        <Text  weight={"bold"} color={"black"} css={{textAlign:"center",mt:50 }} h2>
+          Escolha seu tipo de Projeto Web
         </Text>
       </Row>
-        <Spacer y={2}/>
-      <Row css={{m:10}}>
+      </Col>
+      <Row css={{m:10,mb:200}}>
         <Grid.Container gap={2} justify="space-evenly" css={{  "@md":{
           paddingLeft:44,paddingRight:44
         }}}>
@@ -24,9 +26,9 @@ export function Price(){
                     <Col>
 
                       <Text weight={"bold"}  css={{ textAlign:"center"}}   size={25}>
-                        Site institucional
+                        Institucional ou Lading Page
                       </Text>
-                      <Text color="$gray800" weight={"medium"} css={{ textAlign:"center"}} >Ideal para emprendedores, artistas, e empresas</Text>
+                      <Text color="$gray800" weight={"medium"} css={{ textAlign:"center"}} >Ideal para emprendedores, artistas, e empresas aumentarem sua visibilidade.</Text>
                       </Col>
                     </Card.Header>
                     <Card.Body css={{paddingTop:1}}>
@@ -108,8 +110,8 @@ export function Price(){
                       
                         <ul>
                           <li> <span style={{color:"green",fontWeight:"bolder"}}>&#10003;</span> Painel Administrativo</li>
-                          <li> <span style={{color:"green",fontWeight:"bolder"}}>&#10003;</span> Email Profissional</li>
-                          <li><span style={{color:"green",fontWeight:"bolder"}}>&#10003;</span> Dominio Gratis </li>
+                          <li> <span style={{color:"green",fontWeight:"bolder"}}>&#10003;</span> Layout Do Zero</li>
+                          <li><span style={{color:"green",fontWeight:"bolder"}}>&#10003;</span> Autenticação de Usuarios</li>
                           <li><span style={{color:"green",fontWeight:"bolder"}}>&#10003;</span> Certificado SSL </li>
                           <li><span style={{color:"green",fontWeight:"bolder"}}>&#10003;</span> Ferramentas costumizadas</li>
                         </ul>
@@ -131,8 +133,8 @@ export function Price(){
         </Grid>
       </Grid.Container>
       </Row>
-        <Spacer/>
-  
+        <Spacer y={4}/>
+        <hr />
 
       </Container>
 

@@ -8,7 +8,7 @@ export function Footer(){
 
   <Row as="footer" css={{padding:0, backgroundColor:"#242424"}}>
 
-      <Grid.Container justify="center" gap={2} css={{}} >
+      <Grid.Container css={{padding:0,mb:0, backgroundColor:"#242424", }} justify="center" gap={2}  >
         <Grid xs={12}  justify={"center"}>
           <Image
             src={LogoBlack.src}
