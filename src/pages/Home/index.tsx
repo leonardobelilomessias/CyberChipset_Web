@@ -14,6 +14,7 @@ import { SolutionCustumer } from "../../Components/Home/SolutionCustumer";
 
 
 export default function Home(){
+  
 
   return(
     <>

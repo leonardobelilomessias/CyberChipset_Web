@@ -10,7 +10,7 @@ export function Process(){
         <Text h1 css={{textAlign:"center"}}>
           Da idea até a Realização
         </Text>
-        <Text  as={"p"}  weight={"medium"} css={{textAlign:"center"}}>Veja Como é Nosso Processo de Produção de Software</Text>
+        <Text  size={"3xl"}  weight={"medium"} css={{textAlign:"center",fontSize:"$2xl"}}>Veja Como é Nosso Processo de Produção de Software.</Text>
       <Spacer y={4}/>
         </Col>
 
@@ -22,7 +22,7 @@ export function Process(){
                 Idealização
               </Text>
               <Text  blockquote>
-                Você nos envia sua ideia de forma descritiva. Pede nos enviar modelos e referencias de projetos similares. Seja bem especifico nos detalhes
+                Você nos envia sua ideia de forma descritiva. Pode nos enviar modelos e referências de projetos similares. Seja bem específico nos detalhes.
               </Text>
               </Col>
           </Grid>
@@ -33,7 +33,7 @@ export function Process(){
                 Modelagem
               </Text>
               <Text  blockquote css={{}}>
-                Nosso time vai irá fazer  o levantamento de requesitos funcionais e não fncionais necessarios para a produçãoo do seu projeto 
+                Nosso time vai irá fazer  o levantamento de requesitos funcionais e não funcionais necessários para a produção do seu projeto. 
 
               </Text>
             </Col>
@@ -45,7 +45,7 @@ export function Process(){
                 Apresentação
               </Text>
               <Text  blockquote>
-               Nós apresentamos um prototipo com base nas informaçoes que nos recebemos de forma que você possa entender detalhes do produto
+               Nós apresentamos um protótipo com base nas informações que nós recebemos, de forma que você possa entender detalhes do produto.
               </Text>
               </Col>
           </Grid>
@@ -56,7 +56,7 @@ export function Process(){
                   Validação
                  </Text>
                  <Text  blockquote>
-                Com a apresentação você avalia o prototipo do projeto se atende as suas necessidades para que possamos passar para fase de produção.
+                Com a apresentação você avalia se o prototipo do projeto atende as suas necessidades, para que possamos passar para fase de produção.
               </Text>
               </Col>
           </Grid>
@@ -67,7 +67,7 @@ export function Process(){
                 Produção
             </Text>
             <Text  blockquote>
-                Nessa fase nosso timo trabalhara duro para implementar todas as ideia e colocar seu produto pronto para uso para seus clientes ou usuarios
+                Nessa fase nosso time trabalhará para implementar todas as ideia e configurar todo o sistema periférico para o perfeito funcionamento.
               </Text>
           </Col>
           </Grid>
@@ -78,7 +78,7 @@ export function Process(){
                 Lançamento
               </Text>
               <Text  blockquote >
-                Aqui nós lancaços seu projeto com alta disponibilidade de modo que seu projeto esteja disponivel e pronto para a tilização totalmente funcional
+                Aqui nós lancaçaremos seu projeto com alta disponibilidade de modo que  esteja disponível e pronto para a utilização  de todos seus clientes ou usuários.
               </Text>
           </Col>
           </Grid>

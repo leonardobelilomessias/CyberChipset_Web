@@ -1,5 +1,25 @@
-import { Avatar, Card,Text,Col, Row, Container, Image, Spacer, Grid } from "@nextui-org/react";
+import { Avatar, Card,Text,Col, Row, Container,  Spacer, Grid, styled } from "@nextui-org/react";
 import Back from '../../../public/images/risk.jpg'
+import FiveStars from '../../../public/images/fivestars.webp'
+import Image from "next/image";
+const BoxImage = styled("div",{
+  
+  width: "60%",
+
+  height:"70px",
+  position:"relative",
+  justifyContent:"center",
+  justifyItems:"center",
+  "@md":{
+    width:"50%",
+    height:"70px",
+    alignContent:"center",
+    alignItems:"center", 
+    alignSelf:"center"
+  }
+
+
+})
 
 export  function Comments(){
   const img = "https://static.vecteezy.com/system/resources/previews/004/256/658/original/five-star-customer-product-ratings-review-flat-icons-for-apps-and-websites-illustration-of-five-golden-yellow-stars-in-a-row-isolated-in-a-white-background-concepts-for-ratings-customers-review-free-vector.jpg"
@@ -17,8 +37,11 @@ export  function Comments(){
                   <Card >
                     <Card.Body>
                     <Col  > 
-                    <Row >
-                        <Image width={200} height={40} objectFit="contain" src={img}/>
+                    <Row justify="center" >
+                      <BoxImage>
+
+                        <Image fill alt="fivestars" sizes="100vw" src={FiveStars}/>
+                      </BoxImage>
                     </Row>
                     <Row justify="center">
                     <Avatar   size={"lg"}
@@ -49,8 +72,11 @@ export  function Comments(){
                   <Card >
                     <Card.Body>
                     <Col  > 
-                    <Row >
-                        <Image width={200} height={40} objectFit="contain" src={img}/>
+                    <Row justify="center" >
+                      <BoxImage>
+
+                        <Image fill alt="fivestars" sizes="100vw" src={FiveStars}/>
+                      </BoxImage>
                     </Row>
                     <Row justify="center">
                     <Avatar   size={"lg"}
@@ -82,8 +108,11 @@ export  function Comments(){
                   <Card >
                     <Card.Body>
                     <Col  > 
-                    <Row >
-                        <Image width={200} height={40} objectFit="contain" src={img}/>
+                    <Row justify="center" >
+                      <BoxImage>
+
+                        <Image fill alt="fivestars" sizes="100vw" src={FiveStars}/>
+                      </BoxImage>
                     </Row>
                     <Row justify="center">
                     <Avatar   size={"lg"}

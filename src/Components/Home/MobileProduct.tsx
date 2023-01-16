@@ -1,9 +1,48 @@
-import { Container, Image, Text ,Row, Col, Spacer, Grid} from "@nextui-org/react";
+import { Container,  Text ,Row, Col, Spacer, Grid, styled} from "@nextui-org/react";
 import Android from '../../../public/images/android.png'
 import Apple from '../../../public/images/apple.png'
 import Phone from '../../../public/images/phone.jpg'
+import Image from "next/image";
+
+const BoxImage = styled("div",{
+  
+  width: "90vw",
+
+  height:"40vh",
+  position:"relative",
+  justifyContent:"center",
+  justifyItems:"center",
+  "@md":{
+    width:"100vw",
+    height:"90vh",
+    alignContent:"center",
+    alignItems:"center", 
+    alignSelf:"center"
+  }
 
 
+})
+
+
+const BoxSmallImage = styled("div",{
+  
+  width: "50px",
+
+  height:"50px",
+  position:"relative", 
+  justifyContent:"center",
+  justifyItems:"center",
+  justifySelf:"center",
+  alignSelf:"center",
+  "@md":{
+
+    alignContent:"center",
+    alignItems:"center", 
+    alignSelf:"center"
+  }
+
+
+})
 
 export function MobileProduct(){
  return(
@@ -11,7 +50,10 @@ export function MobileProduct(){
   <Container justify="center" alignContent="center">
     <Grid.Container alignContent="center" alignItems="center">
       <Grid md={6} xs={12}>
-        <Image src={Phone.src}></Image>
+        <BoxImage>
+
+        <Image src={Phone} fill sizes="100vw" alt="phone"></Image>
+        </BoxImage>
       </Grid>
     <Grid xs={12} md={6}>
   <Container alignItems="center" alignContent="center" justify="center" >
@@ -35,16 +77,25 @@ export function MobileProduct(){
 
 <Row  css={{width:"200px"}} align={"center"} justify="center" >
   
-    <Col>
-    
-    <Image  src={Apple.src} height={40} />
+    <Col >
+      <Row justify="center">
+
+    <BoxSmallImage>
+    <Image  src={Apple} sizes="100vw" fill alt="apple"/>
+    </BoxSmallImage>
+      </Row>
     <Row justify="center">
         <Text b>Apple</Text>
 
         </Row>
     </Col>
     <Col>
-        <Image  src={Android.src} height={40} />
+    <Row justify="center">
+
+    <BoxSmallImage>
+        <Image  src={Android} fill sizes="100vw" alt="android"/>
+    </BoxSmallImage>
+    </Row>
         <Row justify="center">
         <Text b>Android</Text>
 

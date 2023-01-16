@@ -1,5 +1,22 @@
-import {  Col, Image, Text, Container, Spacer, Grid,Row, Button } from "@nextui-org/react";
+import {  Col, Text, Container, Spacer, Grid,Row, Button, styled } from "@nextui-org/react";
+import Image from "next/image";
 import Colage from '../../../public/images/colage.png'
+
+const BoxImage = styled("div",{
+  
+  width: "90vw",
+  height:"30vh",
+  position:"relative",
+  "@md":{
+    width:"100vw",
+    height:"80vh",
+    alignContent:"center",
+    alignItems:"center", 
+    alignSelf:"center"
+  }
+
+
+})
 export function SolutionCustumer(){
   return(
     
@@ -65,13 +82,9 @@ export function SolutionCustumer(){
         <Grid xs={12} md={6} css={{ backgroundImage:`url(${Colage})`}}>
           <Col>
             <Row>
-              <Image 
-            height={"100%"}
-            width={"100%"}
-            src={Colage.src} 
-            css={{"@md":{
-              height:"70vh"
-            }}}></Image>
+              <BoxImage>
+                <Image src={Colage} alt="services" fill sizes="100vw"/>
+              </BoxImage>
              </Row>
           </Col>
         </Grid>

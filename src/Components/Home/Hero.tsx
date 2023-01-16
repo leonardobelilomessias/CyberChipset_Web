@@ -1,10 +1,14 @@
 import { Container, Card, Row, Text ,Button, Spacer, styled} from "@nextui-org/react";
+import { ApiError } from "next/dist/server/api-utils";
 import Image from "next/image";
+import { use, useEffect, useState } from "react";
 import Banner from '../../../public/images/client.webp'
+import { api } from "../../utils/api";
 
 const Box = styled("div",{
-  width:"100%",
-
+  height:"40vh",
+  maxWidth:"100%",
+  position:"relative",
   backgroundColor:"$purple200",
 
   "@md":{
@@ -34,12 +38,11 @@ const BoxText = styled("div",{
 })
 
 const BoxImage = styled("div",{
-  height:"50vh",
-  backgroundColor:"Yellow",
+  height:"40vh",
   maxWidth:"100%",
-  backgroundImage:`url(${Banner.src})`,
-  backgroundSize:"cover",
-  backgroundPosition:"center",
+  position:"relative",
+  
+
   "@md":{
     backgroundColor:"$purple200",
     minHeight:"100vh"
@@ -48,25 +51,16 @@ const BoxImage = styled("div",{
 })
 
 export  function Hero(){
-  const collapseItems = [
-    "Inicio",
-    "Exemplos",
-    "Preços",
-    "Sobre",
-    "Contato",
-    "Consultoria",
-    "Seo",
-    "Camapanhas de marketing",
-    "Desenvolvimento de sites e apps",
-  ];
+
 
   return(
     <Box>
-    
-      <BoxImage>
-     
-      </BoxImage>
 
+
+      <BoxImage >
+        <Image src={Banner} fill alt="banner" />
+      </BoxImage>
+  
     <BoxText css={{  }} >
 
       <Spacer/>

@@ -1,11 +1,41 @@
-import { Card, Col, Container, Grid,Row,Spacer,Text,Image,Popover,Button } from "@nextui-org/react";
+import { Card, Col, Container, Grid,Row,Spacer,Text,Popover,Button, styled } from "@nextui-org/react";
+import Image from "next/image";
 
+import * as logo from 'phosphor-react'
+import { ComponentPropsWithoutRef } from "react";
+
+export interface IconProps extends ComponentPropsWithoutRef<"svg"> {
+  alt?: string;
+  color?: string;
+  size?: string | number;
+  weight?: logo.IconWeight;
+  mirrored?: boolean;
+}
 interface itemInfoPros{
   title:string;
   description:string,
-  src:string,
+  icon:logo.Icon
   image:string
 }
+
+const BoxImage = styled("div",{
+  
+  width: "100%",
+  height:"30vh",
+  position:"relative",
+  "@md":{
+    width:"100%",
+    minHeight:"250px",
+    height:"100%",
+    alignContent:"center",
+    alignItems:"center", 
+    alignSelf:"center"
+  }
+
+
+})
+
+
 
 export function CardItemHome(item:itemInfoPros){
   return(  
@@ -13,9 +43,8 @@ export function CardItemHome(item:itemInfoPros){
     <>
   <Card css={{ p: "$6", mw: "400px" }}>
   <Card.Header >
-      <Image
-      alt="nextui logo"
-      src={item.src}
+      < item.icon
+     
       width="34px"
       height="34px"
       
@@ -29,18 +58,14 @@ export function CardItemHome(item:itemInfoPros){
       </Grid>
     </Grid.Container>
 </Card.Header>
-<Image
-      src={item.image}
-      width="100%"
+    <BoxImage>
+      <Image src={item.image} alt="" sizes="100vw" fill/>
+    </BoxImage>
 
-      objectFit="cover"
-      alt="Card image background"
-    />
-<Card.Body css={{ py: "$2" }}>
 <Text  >
   {item.description}
 </Text>
-</Card.Body>
+
 <Card.Footer css={{alignContent:"flex-end",justifyContent:"flex-end"}}>
 
     <Text b color="secondary">→ Detalhes</Text>
