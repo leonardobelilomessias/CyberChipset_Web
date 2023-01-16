@@ -3,7 +3,7 @@ import { ApiError } from "next/dist/server/api-utils";
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
 import Banner from '../../../public/images/client.webp'
-import { api } from "../../utils/api";
+
 
 const Box = styled("div",{
   height:"40vh",
