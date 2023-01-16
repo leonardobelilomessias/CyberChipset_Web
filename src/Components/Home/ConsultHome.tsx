@@ -2,8 +2,9 @@ import { Button, Col, Container, Grid, Input,  Loading,  Row,  Spacer,  styled, 
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Back from '../../../public/images/consult.jpg'
-import { api } from "../../utils/api";
+
 import { AxiosError, AxiosResponse,isAxiosError } from "axios";
+import { api } from "../../pages/api/api";
 
 
 type RequestError= {
