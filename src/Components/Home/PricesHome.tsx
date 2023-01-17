@@ -4,20 +4,20 @@ export function PricesHome(){
   return(
 
  
-      <Container css={{mb:100 }} >
+      <Container   css={{mb:100 }} >
   
       <Col css={{mb:100 }} >
      
         
       <Row css={{mt:100 }}justify="center">
 
-        <Text  weight={"bold"} color={"black"} css={{textAlign:"center",mt:50 }} h2>
+        <Text  weight={"bold"} color={"black"}id="price"  css={{textAlign:"center",mt:50 }} h2>
           Escolha seu tipo de Projeto Web
         </Text>
       </Row>
       </Col>
       <Row css={{m:10,mb:200}}>
-        <Grid.Container gap={2} justify="space-evenly" css={{  "@md":{
+        <Grid.Container  gap={2} justify="space-evenly" css={{  "@md":{
           paddingLeft:44,paddingRight:44
         }}}>
         <Grid md={3}>
@@ -25,7 +25,7 @@ export function PricesHome(){
                     <Card.Header  css={{ }} >
                     <Col>
 
-                      <Text weight={"bold"}  css={{ textAlign:"center"}}   size={25}>
+                      <Text weight={"bold"} css={{ textAlign:"center"}}   size={25}>
                         Institucional ou Lading Page
                       </Text>
                       <Text color="$gray800" weight={"medium"} css={{ textAlign:"center"}} >Ideal para emprendedores, artistas, e empresas aumentarem sua visibilidade.</Text>

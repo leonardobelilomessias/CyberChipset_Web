@@ -27,7 +27,8 @@ export function Learn(){
             </Card>
           </Grid>
         </Grid.Container>
-        <Spacer y={6}/>
+        <Spacer y={8}/>
+        <hr />
       </Col>
     </Container>
   )

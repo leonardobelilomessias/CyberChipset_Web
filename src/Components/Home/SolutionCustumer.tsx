@@ -43,7 +43,7 @@ export function SolutionCustumer(){
                   }
                   
                 }}>
-                            modelage
+                            Para Todos
                     </Text>
           </Row>
           <Row justify="center">
@@ -59,7 +59,7 @@ export function SolutionCustumer(){
           }
           
         }}>
-               personalizada.
+               setores
             </Text>
           </Row>
           <Row>

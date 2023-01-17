@@ -1,4 +1,4 @@
-import { Container, Card, Row, Text ,Button, Spacer, styled} from "@nextui-org/react";
+import { Container, Card, Row, Text ,Button, Spacer, styled, Col} from "@nextui-org/react";
 import { ApiError } from "next/dist/server/api-utils";
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
@@ -6,15 +6,11 @@ import Banner from '../../../public/images/client.webp'
 
 
 const Box = styled("div",{
-  height:"40vh",
+  minHeight:"40vh",
   maxWidth:"100%",
-  position:"relative",
-  backgroundColor:"$purple200",
+
 
   "@md":{
-
-    position:"relative",
-
   }
 })
 
@@ -54,11 +50,13 @@ export  function Hero(){
 
 
   return(
+
+    <Col>
     <Box>
 
 
       <BoxImage >
-        <Image src={Banner} fill alt="banner" />
+        <Image  src={Banner} fill alt="banner" sizes="100vw"/>
       </BoxImage>
   
     <BoxText css={{  }} >
@@ -84,7 +82,7 @@ export  function Hero(){
           justifyContent:"center",
           alignItems:"center",
           lineHeight:"$xs",
-          textShadow: "5px 8px 15px rgba(0, 0, 0, 0.7)",
+          textShadow: "2px 2px 10px rgba(0, 0, 0, 0.7)",
           "@md":{
             fontSize:"$6xl",
             textShadow: "5px 5px 15px rgba(0,0, 0, 0.0)",
@@ -104,9 +102,9 @@ export  function Hero(){
       <Text
        b  size={"$base"} 
        color={"$white"}
-       css={{fontSize:"1.25rem", textShadow: "3px 2px 3px rgba(0, 0, 0, 0.6)", textAlign:"left" , "@md":{
-            fontSize:34,
-            
+       css={{fontSize:"1.25rem", textShadow: "1px 1px 3px rgba(0, 0, 0, 1)", textAlign:"left" , "@md":{
+         fontSize:34,
+         
         }}}>
         Tenha em suas mãos as mesmas ferramentas de <Text transform="uppercase" weight={"bold"} color="secondary" span>bigtecs</Text>  com Apple, Intagram, Amazon e Netflix.
       </Text>
@@ -120,5 +118,6 @@ export  function Hero(){
     </BoxText >
  
     </Box>
+          </Col>
   )
 }

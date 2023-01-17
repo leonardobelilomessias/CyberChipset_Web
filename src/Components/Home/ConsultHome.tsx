@@ -139,7 +139,7 @@ useEffect(()=>{
                                       <Input  status={stateEmail?"default":"error" } width="100%" value={email}  labelPlaceholder={statenumber?"Email":"Digite um email valido"} onChange={(event)=>setEmail(event.target.value)} />
                                     </Grid>
                                     <Grid xs={12}>
-                                      <Input  status={statenumber?"default":"error" } width="100%" value={number}  labelPlaceholder={statenumber?"number":"Digite um telefone valido"} onChange={(event)=>setnumber(event.target.value)}/>
+                                      <Input  status={statenumber?"default":"error" } width="100%" value={number}  labelPlaceholder={statenumber?"Nº whatsapp com DDD (Ex.: 31986261771)":"Digite um telefone valido"} onChange={(event)=>setnumber(event.target.value)}/>
                                       
                                     </Grid>
                                     <Grid xs={12}>

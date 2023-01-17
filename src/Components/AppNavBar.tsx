@@ -1,4 +1,4 @@
-import { Button, NavbarToggleProps, styled } from "@nextui-org/react"
+import { Button, NavbarToggleProps, Row, styled } from "@nextui-org/react"
 import {Navbar,Text,Link, Image,Col,} from '@nextui-org/react'
 import Logo from '../../public/images/logo.png'
 import Linker from 'next/link';
@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import test from "node:test";
 import React from "react";
+import { User } from "phosphor-react";
 
 
 const BoxMenu =styled("div",{
@@ -122,9 +123,20 @@ export function AppNavbar(){
               </BoxMenu>
 
        
-            
+          <Linker href={"/login"}>
+          <Row css={{ ml:80}} align="center" wrap="wrap">
+            <Row  css={{backgroundColor:"white", borderColor:"$secondary", borderWidth:"1px", borderStyle:"solid",p:8,borderRadius:"8px"}} justify="center" align="center">
 
-        </Navbar.Content>
+          <Text color="secondary" hideIn={"md"} b css={{ lineHeight:0, alignItems:"center", alignContent:"center", justifyContent:"center",mr:5 }}>Área do Cliente</Text>
+          <User size={20} color="purple" />
+            </Row>
+          </Row>
+          </Linker>  
+          </Navbar.Content>
+     
+
+  
+          
     </Navbar>
 
   )

@@ -12,8 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <AppNavbar/>
     <Component {...pageProps} />
     <ButtonWhatsapp/>
-    <Footer />
-    
+    <Footer /> 
   </NextUIProvider>
   )
 }

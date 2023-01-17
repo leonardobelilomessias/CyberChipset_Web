@@ -17,8 +17,10 @@ export function InfoAbouteSites(){
         <Grid.Container alignItems="center" gap={4} >
                 <Grid css={{backgroundColor:""}} xs={12} justify={"center"} >
                     <Col >  
-                      <Row  justify="center" css={{}}>
-                        <Text size={"$5xl"} weight={"bold"} color="$purple700"  css={{lineHeight:1, backgroundColor:""}} >
+                      <Row  justify="center" css={{mb:10}}>
+                        <Text size={"$5xl"} weight={"bold"} color="$purple700"  css={{lineHeight:1, textShadow:"10px 10px 10px gray","@md":{
+                          fontSize:"$8xl"
+                        }}} >
                           87% 
                         </Text>
                       </Row>
@@ -31,8 +33,10 @@ export function InfoAbouteSites(){
               </Grid>
               <Grid css={{backgroundColor:""}} xs={12} justify={"center"} >
                     <Col >  
-                      <Row  justify="center" css={{}}>
-                        <Text size={"$5xl"} weight={"bold"} color="$purple700"  css={{lineHeight:1, backgroundColor:""}} >
+                      <Row  justify="center" css={{mb:10}}>
+                        <Text size={"$5xl"} weight={"bold"} color="$purple700"  css={{lineHeight:1, textShadow:"10px 10px 10px gray","@md":{
+                          fontSize:"$8xl"
+                        }}} >
                         R$2,8 bilhoes
                         </Text>
                       </Row>
@@ -45,8 +49,10 @@ export function InfoAbouteSites(){
               </Grid>
               <Grid css={{backgroundColor:""}} xs={12} justify={"center"} >
                     <Col >  
-                      <Row  justify="center" css={{}}>
-                        <Text size={"$5xl"} weight={"bold"} color="$purple700" css={{lineHeight:1, backgroundColor:""}} >
+                      <Row  justify="center" css={{mb:10}}>
+                        <Text size={"$5xl"} weight={"bold"} color="$purple700" css={{lineHeight:1, textShadow:"10px 10px 10px gray","@md":{
+                          fontSize:"$8xl"
+                        }}} >
                         R$6,7 trilhões
                         </Text>
                       </Row>
@@ -64,7 +70,7 @@ export function InfoAbouteSites(){
 
         <Row justify="center">
 
-        <Text  b css={{lineHeight:1.1, backgroundColor:"",textAlign:"center"}} >
+        <Text  b size={"$3xl"} css={{lineHeight:1.1, backgroundColor:"",textAlign:"center"}} >
          <Spacer y={2}/>
 
           Tendencia mundial espera-se um crescimento em  R$2,8 bilhoes em vendas.  

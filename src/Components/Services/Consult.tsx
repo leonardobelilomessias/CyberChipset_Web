@@ -5,6 +5,7 @@ export function Consult(){
   return(
     <Container>
         <Col>
+        <Spacer y={8}/>
         
           <Row justify="center">
             <Text h1 css={{textAlign:"center"}} >
@@ -25,7 +26,8 @@ export function Consult(){
               Entrar em contato
             </Button>
           </Row>
-          <Spacer y={5}/>
+          <Spacer y={8}/>
+          
         </Col>
     </Container>
   )

@@ -7,7 +7,7 @@ export function BannerServices(){
     <Col  css={{backgroundImage:`url(${BackBanner.src})`, backgroundSize:"cover", backgroundColor:"$purple900", p:20}}>
         <Grid.Container gap={2} justify="space-around">
           <Grid>
-          <Text  color="white" h3 css={{textAlign:"center"}}> Tecnologias usadas pelas maiore marcas</Text>
+          <Text  color="white" h3 css={{textAlign:"center"}}> Desfrute Tecnologias usadas pelas maiore marcas</Text>
 
           </Grid>
           <Grid>

@@ -4,7 +4,7 @@ import { NumberOne, NumberSquareFive, NumberSquareFour, NumberSquareOne, NumberS
 export function Process(){
   return(
     <>
-      <Container css={{py:100}}>
+      <Container css={{py:100,}}>
         <Col >
       <Spacer y={3}/>
         <Text h1 css={{textAlign:"center"}}>
