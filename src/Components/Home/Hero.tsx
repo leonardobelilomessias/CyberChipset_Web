@@ -10,15 +10,13 @@ const Box = styled("div",{
   maxWidth:"100%",
 
 
+
   "@md":{
   }
 })
 
 const BoxText = styled("div",{
-  
-  
   background: "rgba(255, 255, 255, 0.4)",
-
   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   backdropFilter: "blur(15px)",
   webkitBackdropFilter: "blur(5px)",
@@ -26,9 +24,9 @@ const BoxText = styled("div",{
   px:"$10",
   "@md":{
     position:"absolute",
-    top:110,
+    top:"9rem",
     left:50,
-    width:"45%",
+    width:"40%",
     borderRadius: "16px",
   }
 })

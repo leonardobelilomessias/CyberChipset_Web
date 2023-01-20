@@ -1,8 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { CssBaseline } from '@nextui-org/react';
-import { AppNavbar } from '../Components/AppNavBar';
-import { Footer } from '../Components/Footer';
+
 
 class MyDocument extends Document {
   static async getInitialProps(ctx:any) {

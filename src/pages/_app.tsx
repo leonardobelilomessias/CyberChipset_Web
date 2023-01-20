@@ -1,9 +1,10 @@
 
 import type { AppProps } from 'next/app'
 import { NextUIProvider } from '@nextui-org/react';
-import { AppNavbar } from '../Components/AppNavBar';
-import { Footer } from '../Components/Footer';
-import { ButtonWhatsapp } from '../Components/ButtonWhatsapp';
+import { AppNavbar } from '../Components/LayoutComponets/AppNavBar';
+import { ButtonWhatsapp } from '../Components/LayoutComponets/ButtonWhatsapp';
+import { Footer } from '../Components/LayoutComponets/Footer';
+
 
 
 export default function App({ Component, pageProps }: AppProps) {

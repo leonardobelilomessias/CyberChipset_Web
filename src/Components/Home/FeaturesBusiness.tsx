@@ -60,11 +60,11 @@ export function  FeatureBusiness(){
         Seguindo padrões de alto nível e processos rigorosos para o sucesso do garantido do seu negócio.
       <Spacer y={5} />
       </Text>
-      <Grid.Container gap={3} >
+      <Grid.Container gap={3} justify="center" >
             {InfoItens.map(item=>{
               return(
                 
-              <Grid key={item.title} xs={12} md={4}>
+              <Grid key={item.title} xs={12} md={4} justify="center">
                 <CardItemHome image={item.image}  title={item.title} description={item.description} icon={item.icon}/>
               </Grid>
               )

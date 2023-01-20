@@ -1,6 +1,31 @@
 import { Button, Card, Col, Container, Grid, Row, Spacer, Text } from "@nextui-org/react";
+import axios from "axios";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export function PricesHome(){
+
+export interface ProductsProps{
+  products:{
+    id:string
+    name:string
+    price: number
+  }[]
+}
+
+export function PricesHome({products}:ProductsProps){
+  const {push} = useRouter()
+  async function BuyProduct(priceId:string){
+    try{
+
+      const response = await  axios.post('/api/checkout',{priceId})
+      const {checkoutUrl} = response.data
+      console.log(response.data)
+      window.location.href = checkoutUrl
+    }catch{
+        alert("falha ao direcionar para o check out")
+    }
+  }
+  const [price1, price2] = products
   return(
 
  
@@ -44,14 +69,16 @@ export function PricesHome(){
                           
                           <Text size={16} css={{ textAlign:"center", background:"", m:0}}>
                           De <Text del >879,90</Text>  por </Text>
-                          <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}>R$</Text> 599,90</Text>
+                          <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}>R$</Text> {price2.price}</Text>
                         </Col>
                     </Card.Body>
                     
                     <Card.Divider ></Card.Divider>
                     <Card.Footer>
                     <Row justify="center">
-                      <Button color={"secondary"}>Quero esse</Button>
+                      
+                      <Button color={"secondary"} onPress={()=>{ push("/product/1")}}>Quero esse</Button>
+             
                       </Row>
                     </Card.Footer>
                   </Card>
@@ -82,15 +109,17 @@ export function PricesHome(){
                             
                             <Text size={16} css={{ textAlign:"center", background:"", m:0}}>
                             De <Text del >2369,90</Text>  por </Text>
-                            <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}>R$</Text> 1599,90</Text>
+                            <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}>R$</Text> {price1.price}</Text>
                           </Col>
                       </Card.Body>
                       
                       <Card.Divider ></Card.Divider>
                       <Card.Footer>
+                       
                       <Row justify="center">
-                        <Button color={"secondary"}>Quero esse</Button>
+                          <Button color={"secondary"} onPress={()=>{ push("/product/2")}} >Quero esse</Button>
                         </Row>
+                        
                       </Card.Footer>
                     </Card>
         </Grid>

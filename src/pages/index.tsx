@@ -1,13 +1,30 @@
 import Head from 'next/head'
 
 import { Inter } from '@next/font/google'
-import { Footer } from '../Components/Footer'
-import  Home  from './Home'
-import { AppNavbar } from '../Components/AppNavBar'
+import { stripe } from '../utils/stripe'
+import Stripe from 'stripe'
+import { Comments } from '../Components/Home/Comments'
+import { ConsultHome } from '../Components/Home/ConsultHome'
+import { FeatureBusiness } from '../Components/Home/FeaturesBusiness'
+import { Hero } from '../Components/Home/Hero'
+import { InfoAbouteSites } from '../Components/Home/InfoAboutSites'
+import { MobileProduct } from '../Components/Home/MobileProduct'
+import { PricesHome } from '../Components/Home/PricesHome'
+import { Process } from '../Components/Home/Process'
+import { QuestionAnswers } from '../Components/Home/QuentionsAnswers'
+import { SolutionCustumer } from '../Components/Home/SolutionCustumer'
 const inter = Inter({ subsets: ['latin'] })
 
+export interface ProductsProps{
+  products:{
+    id:string
+    name:string
+    price: number
+  }[]
+}
 
-export default function Index() {
+export default function Index({products}:ProductsProps) {
+
   return (
     <>
       <Head>
@@ -18,8 +35,38 @@ export default function Index() {
       </Head>
      
      <main >
-        <Home/>
+
+      <Hero/>
+      <Process/>
+      <ConsultHome/>
+      
+{   <FeatureBusiness/>
+    }
+    <SolutionCustumer/>
+    <InfoAbouteSites/>
+    <PricesHome products={products} />
+    <MobileProduct/>
+    <Comments/>
+      <QuestionAnswers/>
       </main>
     </>
   )
+}
+export async function getServerSideProps<GetServerSideProps>() {
+  const response = await stripe.products.list({expand:["data.default_price"]})
+  const products = response.data.map(product=>{
+    const prices = product.default_price as Stripe.Price
+    return{
+      id:product.id,
+      name:product.name,
+      price: prices.unit_amount as number/100
+    }
+  })
+  
+  return {
+    props: {
+      name:"leo",
+     products
+    }, // will be passed to the page component as props
+  }
 }

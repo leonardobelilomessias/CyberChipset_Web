@@ -1,15 +1,17 @@
 import { Avatar, Button, Col, Container, Input, Row, Text } from "@nextui-org/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { User } from "phosphor-react";
 
 export default function Login(){
+  const {push} = useRouter()
   return(
     <>
 
-        <Container css={{backgroundColor:"$accents1",p:20,pt:100,minHeight:"100vh",justifyContent:"center", justifyItems:"center", alignItems:"center", alignContent:"center",}}>
+        <Container css={{backgroundColor:"$gray100",p:20,pt:100,minHeight:"100vh",justifyContent:"center", justifyItems:"center", alignItems:"center", alignContent:"center",}}>
           <Row justify="center" align="center">
 
-          <Col   css={{backgroundColor:"white",p:20,pb:180, justifyContent:"center", justifyItems:"center", alignItems:"center", alignContent:"center",justifySelf:"center","@md":{width:"50vh"}}}>
+          <Col   css={{backgroundColor:"white",p:20,pb:180, justifyContent:"center", justifyItems:"center", alignItems:"center", alignContent:"center",justifySelf:"center",boxShadow:"$xl","@md":{width:"50vh"}}}>
             <Row justify="center">
 
               <Text b size={"$3xl"}>Entrar</Text>
@@ -22,14 +24,14 @@ export default function Login(){
                     </Row>
               </Row>
               <Row justify="center" css={{my:30,}}>
-                <Input placeholder="email" css={{width:"80%"}}/>
+                <Input  labelPlaceholder="Email" css={{width:"80%"}} />
               </Row>
               <Row justify="center" css={{my:30}}>
                 <Input.Password labelPlaceholder="Password"  css={{width:"80%"}} />
               </Row>
               
               <Row justify="center" css={{mb:10,mt:50}}>
-                <Button css={{width:"80%"}} color={"secondary"}>
+                <Button onPress={()=>push("/painelClient")} css={{width:"80%"}} color={"secondary"}>
                   Entrar
                 </Button>
               </Row>

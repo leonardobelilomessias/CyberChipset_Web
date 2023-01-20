@@ -1,11 +1,9 @@
 import { Button, NavbarToggleProps, Row, styled } from "@nextui-org/react"
 import {Navbar,Text,Link, Image,Col,} from '@nextui-org/react'
-import Logo from '../../public/images/logo.png'
+import Logo from '../../../public/images/logo.png'
 import Linker from 'next/link';
-import { Box } from "./Layout";
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
-import test from "node:test";
 import React from "react";
 import { User } from "phosphor-react";
 
@@ -124,11 +122,11 @@ export function AppNavbar(){
 
        
           <Linker href={"/login"}>
-          <Row css={{ ml:80}} align="center" wrap="wrap">
+          <Row css={{ "@xl":{ml:80}}} align="center" wrap="wrap">
             <Row  css={{backgroundColor:"white", borderColor:"$secondary", borderWidth:"1px", borderStyle:"solid",p:8,borderRadius:"8px"}} justify="center" align="center">
 
-          <Text color="secondary" hideIn={"md"} b css={{ lineHeight:0, alignItems:"center", alignContent:"center", justifyContent:"center",mr:5 }}>Área do Cliente</Text>
-          <User size={20} color="purple" />
+          <Text color="secondary" hideIn={"lg"}  b css={{ lineHeight:0, alignItems:"center", alignContent:"center", justifyContent:"center",mr:5 }}>Área do Cliente</Text>
+          <User size={20} color="#7828C8" />
             </Row>
           </Row>
           </Linker>  

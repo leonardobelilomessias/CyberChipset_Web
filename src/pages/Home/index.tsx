@@ -1,3 +1,4 @@
+
 import { Comments } from "../../Components/Home/Comments";
 import { ConsultHome } from "../../Components/Home/ConsultHome";
 import { FeatureBusiness } from "../../Components/Home/FeaturesBusiness";
@@ -15,21 +16,10 @@ import { SolutionCustumer } from "../../Components/Home/SolutionCustumer";
 
 export default function Home(){
   
-
   return(
     <>
-      <Hero/>
-      <Process/>
-      <ConsultHome/>
-      
-{   <FeatureBusiness/>
-    }
-    <SolutionCustumer/>
-    <InfoAbouteSites/>
-    <PricesHome/>
-    <MobileProduct/>
-    <Comments/>
-      <QuestionAnswers/>
+
     </>
   )
 }
+

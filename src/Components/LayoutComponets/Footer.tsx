@@ -1,5 +1,5 @@
 import { Col, Container, Grid,Row,Spacer,Text,styled } from "@nextui-org/react";
-import LogoBlack from '../../public/images/logo-black.png'
+import LogoBlack from '../../../public/images/logo-black.png'
 import {InstagramLogo} from 'phosphor-react'
 import {YoutubeLogo} from 'phosphor-react'
 import {FacebookLogo} from 'phosphor-react'
