@@ -9,19 +9,28 @@ import { FeatureBusiness } from '../Components/Home/FeaturesBusiness'
 import { Hero } from '../Components/Home/Hero'
 import { InfoAbouteSites } from '../Components/Home/InfoAboutSites'
 import { MobileProduct } from '../Components/Home/MobileProduct'
-import { PricesHome } from '../Components/Home/PricesHome'
 import { Process } from '../Components/Home/Process'
 import { QuestionAnswers } from '../Components/Home/QuentionsAnswers'
 import { SolutionCustumer } from '../Components/Home/SolutionCustumer'
+import { PricesPremiumHome } from '../Components/Home/PricesPremiumHome'
+import { PricesPopHome } from '../Components/Home/PricesPopHome'
+import { GetStaticProps } from 'next'
 const inter = Inter({ subsets: ['latin'] })
 
 export interface ProductsProps{
   products:{
-    id:string
+    idProduct:string
+    idPrice:string
     name:string
     price: number
   }[]
 }
+
+interface FormatStripe {
+  default_price:{
+    id?:string
+  }
+} 
 
 export default function Index({products}:ProductsProps) {
 
@@ -44,7 +53,8 @@ export default function Index({products}:ProductsProps) {
     }
     <SolutionCustumer/>
     <InfoAbouteSites/>
-    <PricesHome products={products} />
+    <PricesPremiumHome products={products} />
+    <PricesPopHome  products={products}/>
     <MobileProduct/>
     <Comments/>
       <QuestionAnswers/>
@@ -52,21 +62,22 @@ export default function Index({products}:ProductsProps) {
     </>
   )
 }
-export async function getServerSideProps<GetServerSideProps>() {
+export const getStaticProps:GetStaticProps = async ()=> {
   const response = await stripe.products.list({expand:["data.default_price"]})
   const products = response.data.map(product=>{
     const prices = product.default_price as Stripe.Price
     return{
       id:product.id,
       name:product.name,
-      price: prices.unit_amount as number/100
+      price: prices.unit_amount as number/100,
+      idPrice:prices.id
     }
   })
   
   return {
     props: {
-      name:"leo",
      products
-    }, // will be passed to the page component as props
+    }, 
+    revalidate: 60 * 60 *2
   }
 }

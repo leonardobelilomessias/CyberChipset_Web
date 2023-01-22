@@ -16,7 +16,7 @@ export default function Service(){
       <BannerServices/>
       <GridtypeSites/>
       <Learn/>
-      <Consult/>
+{/*      <Consult/>*/}
     </Container>
 
   )

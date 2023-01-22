@@ -52,7 +52,7 @@ export function MobileProduct(){
       <Grid md={6} xs={12}>
         <BoxImage>
 
-        <Image src={Phone} fill sizes="100vw" alt="phone"></Image>
+        <Image priority src={Phone} fill sizes="100vw" alt="phone"></Image>
         </BoxImage>
       </Grid>
     <Grid xs={12} md={6}>

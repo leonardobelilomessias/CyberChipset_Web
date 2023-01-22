@@ -3,7 +3,7 @@ import BackBanner from '../../../public/images/infinite.jpg'
 export function BannerServices(){
   return(
 
-    <Col css={{padding:0, backgroundColor:"red"}}>
+    <Col css={{padding:0}}>
     <Col  css={{backgroundImage:`url(${BackBanner.src})`, backgroundSize:"cover", backgroundColor:"$purple900", p:20}}>
         <Grid.Container gap={2} justify="space-around">
           <Grid>

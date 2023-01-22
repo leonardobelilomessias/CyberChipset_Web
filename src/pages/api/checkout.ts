@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { stripe } from "../../utils/stripe";
+
 export default async function handler(req:NextApiRequest,res:NextApiResponse){
   const {priceId} = req.body
   const checkoutSession = await stripe.checkout.sessions.create({

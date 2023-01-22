@@ -49,14 +49,14 @@ export function  FeatureBusiness(){
         <hr />
  
       <Spacer y={5}/>
-      <Row justify="center">
-      <Text color="secondary" size={"$2xl"} weight="bold"> Porque Cyber Cipset?</Text>
+      <Row data-aos="fade-up"  data-aos-once="true" justify="center">
+      <Text color="secondary" size={"$2xl"} weight="bold" > Porque Cyber Cipset?</Text>
 
       </Row>
-      <Text size={"$5xl"} transform="capitalize"  css={{textAlign:"center", fontWeight:"$bold"}}>
+      <Text data-aos="fade-up"  data-aos-once="true" size={"$5xl"} transform="capitalize"  css={{textAlign:"center", fontWeight:"$bold"}}>
         Seu projeto com estratégia e inteligência
       </Text>
-      <Text css={{textAlign:'center'}} size="$2xl" color="$gray800" weight="medium">
+      <Text  data-aos="fade-up"  data-aos-once="true" css={{textAlign:'center'}} size="$2xl" color="$gray800" weight="medium">
         Seguindo padrões de alto nível e processos rigorosos para o sucesso do garantido do seu negócio.
       <Spacer y={5} />
       </Text>
@@ -64,7 +64,7 @@ export function  FeatureBusiness(){
             {InfoItens.map(item=>{
               return(
                 
-              <Grid key={item.title} xs={12} md={4} justify="center">
+              <Grid data-aos="zoom-in"  data-aos-once="true" key={item.title} xs={12} md={4} justify="center">
                 <CardItemHome image={item.image}  title={item.title} description={item.description} icon={item.icon}/>
               </Grid>
               )

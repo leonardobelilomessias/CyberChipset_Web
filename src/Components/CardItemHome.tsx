@@ -29,7 +29,9 @@ const BoxImage = styled("div",{
     height:"100%",
     alignContent:"center",
     alignItems:"center", 
-    alignSelf:"center"
+    alignSelf:"center",
+    position:"relative"
+    
   }
 
 
@@ -59,7 +61,7 @@ export function CardItemHome(item:itemInfoPros){
     </Grid.Container>
 </Card.Header>
     <BoxImage>
-      <Image src={item.image} alt="" sizes="100vw" fill/>
+      <Image priority src={item.image} alt="" sizes="100vw" fill/>
     </BoxImage>
 
 <Text  >

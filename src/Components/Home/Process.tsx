@@ -1,7 +1,13 @@
 import { Col, Container, Grid, Spacer, Text } from "@nextui-org/react";
 import { NumberOne, NumberSquareFive, NumberSquareFour, NumberSquareOne, NumberSquareSix, NumberSquareThree, NumberSquareTwo } from "phosphor-react";
-
+import Aos  from 'aos'
+import 'aos/dist/aos.css'; 
+import { useEffect } from "react";
 export function Process(){
+  useEffect(()=>{
+    Aos.init({duration:1500})
+  },[])
+
   return(
     <>
       <Container css={{py:100,}}>
@@ -15,7 +21,7 @@ export function Process(){
         </Col>
 
         <Grid.Container gap={2}  justify="center">
-          <Grid xs={12} md={3.5}>
+          <Grid data-aos="zoom-in"  data-aos-once="true"   xs={12} md={3.5}>
               <NumberSquareOne color="#7828C8" weight="fill"  size={72} /> 
               <Col>
               <Text b size={"$2xl"}  css={{lineHeight:"$2xl"}}>
@@ -26,7 +32,7 @@ export function Process(){
               </Text>
               </Col>
           </Grid>
-          <Grid xs={12} md={3.5}>
+          <Grid data-aos="zoom-in"  data-aos-once="true"   xs={12} md={3.5}>
             <NumberSquareTwo  color="#7828C8" weight="fill"  size={72} />
             <Col>
               <Text size={"$2xl"} b  css={{lineHeight:"$2xl"}}>
@@ -38,7 +44,7 @@ export function Process(){
               </Text>
             </Col>
           </Grid>
-          <Grid xs={12} md={3.5}>
+          <Grid data-aos="zoom-in"  data-aos-once="true"  xs={12} md={3.5}>
           <NumberSquareThree color="#7828C8" weight="fill"  size={72} />
               <Col>
               <Text size={"$2xl"} b css={{lineHeight:"$2xl"}}>
@@ -49,7 +55,7 @@ export function Process(){
               </Text>
               </Col>
           </Grid>
-          <Grid xs={12} md={3.5}>
+          <Grid data-aos="zoom-in"  data-aos-once="true"  xs={12} md={3.5}>
           <NumberSquareFour color="#7828C8" weight="fill"  size={72} />
               <Col>
                 <Text size={"$2xl"} b css={{lineHeight:"$2xl"}}>
@@ -60,7 +66,7 @@ export function Process(){
               </Text>
               </Col>
           </Grid>
-          <Grid xs={12} md={3.5}>
+          <Grid data-aos="zoom-in"  data-aos-once="true"  xs={12} md={3.5}>
           <NumberSquareFive color="#7828C8" weight="fill"  size={72} />
           <Col>
             <Text size={"$2xl"} b css={{lineHeight:"$2xl"}}>
@@ -71,7 +77,7 @@ export function Process(){
               </Text>
           </Col>
           </Grid>
-          <Grid xs={12} md={3.5}>
+          <Grid data-aos="zoom-in"  data-aos-once="true"  xs={12} md={3.5}>
           <NumberSquareSix color="#7828C8" weight="fill"  size={72} />
           <Col>
               <Text  size={"$2xl"} b css={{lineHeight:"$2xl"}}>

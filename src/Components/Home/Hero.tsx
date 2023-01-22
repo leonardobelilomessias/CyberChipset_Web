@@ -3,6 +3,8 @@ import { ApiError } from "next/dist/server/api-utils";
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
 import Banner from '../../../public/images/client.webp'
+import Aos  from 'aos'
+import 'aos/dist/aos.css'; 
 
 
 const Box = styled("div",{
@@ -45,7 +47,9 @@ const BoxImage = styled("div",{
 })
 
 export  function Hero(){
-
+  useEffect(()=>{
+    Aos.init({duration:1500})
+  },[])
 
   return(
 
@@ -54,10 +58,11 @@ export  function Hero(){
 
 
       <BoxImage >
-        <Image  src={Banner} fill alt="banner" sizes="100vw"/>
+        <Image priority  src={Banner} fill alt="banner" sizes="100vw"/>
       </BoxImage>
   
-    <BoxText css={{  }} >
+    <BoxText data-aos="fade-up"
+     css={{  }} >
 
       <Spacer/>
       <Row>
@@ -65,7 +70,7 @@ export  function Hero(){
           
             fontSize:"$3xl"
           }}}>
-              Aumente seus Resultados.
+              Criação de Sites e Apps.
         </Text>
         </Row>
       <Row align="center" justify="center">
@@ -89,9 +94,10 @@ export  function Hero(){
         weight="bold"
         
       >
-        Criando projetos com 
-        <Text as={"span"} css={{ color:"$purple600", fontSize:"$5xl", fontWeight:"$bold" ,"@md":{fontSize:"$6xl"}}}> tecnologias </Text> mais  
-        <Text as={"span"}  css={{color:"$purple600",fontSize:"$5xl", fontWeight:"$bold","@md":{fontSize:"$6xl"}}}> avançadas </Text> do mercado.
+        
+        Seus projetos com as
+        <Text as={"span"} css={{ color:"$purple600", fontSize:"$5xl", fontWeight:"$bold" ,"@md":{fontSize:"$6xl"}}}> Tecnologias </Text> mais  
+        <Text as={"span"}  css={{color:"$purple600",fontSize:"$5xl", fontWeight:"$bold","@md":{fontSize:"$6xl"}}}> Avançadas </Text> do mercado.
         <Spacer y={0.5}/>
       </Text>
 

@@ -5,7 +5,8 @@ import Back from '../../../public/images/consult.jpg'
 
 import { AxiosError, AxiosResponse,isAxiosError } from "axios";
 import { api } from "../../pages/api/api";
-
+import Aos  from 'aos'
+import 'aos/dist/aos.css'; 
 
 type RequestError= {
   status:number
@@ -27,12 +28,16 @@ const BoxImage = styled("div",{
     height:"50vh",
     alignContent:"center",
     alignItems:"center", 
-    alignSelf:"center"
+    alignSelf:"center",
+    position:"relative",
   }
 
 
 })
 export function ConsultHome(){
+  useEffect(()=>{
+    Aos.init({duration:1500})
+  },[])
   const [name,setName] = useState("")
   const [email,setEmail] = useState("")
   const [number,setnumber] = useState("")
@@ -101,10 +106,10 @@ useEffect(()=>{
                   
 
            
-                      <BoxImage>
+                      <BoxImage data-aos="fade-right"  data-aos-once="true">
                         <div>
 
-                      <Image src={Back} fill alt="" sizes="100"/>
+                      <Image priority src={Back} fill alt="" sizes="100"/>
                         </div>
 
                       </BoxImage>
@@ -115,7 +120,7 @@ useEffect(()=>{
                 
 
                   <Grid  md={5}>
-                              <Grid.Container gap={3}>
+                              <Grid.Container gap={3}data-aos="fade-left"  data-aos-once="true" >
                                   <Grid>
 
                                       <Text color="secondary" b size={"$2xl"}>

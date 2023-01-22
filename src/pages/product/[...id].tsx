@@ -7,22 +7,65 @@ import PhotoProduct from '../../../public/images/bic.jpg'
 const InfoSites = [
   {
     id:"1",
-    title:"Site instituncional",
-    price:"590",
-    idPrice:"price_1MR049CVpoIEs3KjOexMTM4s"
+    title:"Site instituncional Premium",
+    price:"1290,00",
+    idPrice:"price_1MSQ9ACVpoIEs3Kjrl5BflAQ",
+    description:
+    `
+    Criação de site institucional ou landing page.Desenvolvimento e configurações para lançamento de projeto pessoal 
+    criação de layout.
+    compra e configuração de dominio(Dominios são renovados anualmente).
+    hospedagem duração anual.
+    Configuração certificado ssl.
+    Manutenção simples(Garantia de site online)
+
+    `
   },
   {
     id:"2",
-    title:"Ecommerce",
-    price:"1599",
-    idPrice:"price_1MR060CVpoIEs3Kjdx4hThIw",
+    title:"Ecommerce Premium",
+    price:"4.990,00",
+    idPrice:"price_1MSQ9ACVpoIEs3Kjrl5BflAQ",
+    description:
+    `
+    Criação de site institucional ou landing page.Desenvolvimento e configurações para lançamento de projeto pessoal 
+    criação de layout.
+    compra e configuração de dominio(Dominios são renovados anualmente).
+    hospedagem duração anual.
+    Configuração certificado ssl.
+    Manutenção simples(Garantia de site online)
+`
   },
   {
     id:"3",
-    title:"Ecommerce",
-    price:"1599",
-    idPrice:"price_1MR060CVpoIEs3Kjdx4hThIw"
-  }
+    title:"Site instituncional POP",
+    price:"790,00",
+    idPrice:"price_1MSQ9OCVpoIEs3KjjP42eQUF",
+    description:
+    `
+    Criação de site institucional ou landing page.Desenvolvimento e configurações para lançamento de projeto pessoal 
+    criação de layout.
+    compra e configuração de dominio(Dominios são renovados anualmente).
+    hospedagem duração anual.
+    Configuração certificado ssl.
+    Manutenção simples(Garantia de site online)
+`
+  },
+  {
+    id:"4",
+    title:"Ecommerce POP",
+    price:"1890,00",
+    idPrice:"price_1MSQ9ACVpoIEs3Kjrl5BflAQ",
+    description:
+    `
+    Criação de site institucional ou landing page.Desenvolvimento e configurações para lançamento de projeto pessoal 
+     Criação de layout. 
+    Compra e configuração de dominio(Dominios são renovados anualmente).
+    Hospedagem duração anual.
+    Configuração certificado ssl.
+    Manutenção simples(Garantia de site online)
+`
+  },
 ] 
 
 interface InfoSiteProps{
@@ -45,6 +88,8 @@ const BoxImage = styled("div",{
 
 
 export default function Product(){
+  const router =useRouter()
+  const idPrice = router.query.idPrice as string
   async function BuyProduct(priceId:string){
     try{
 
@@ -75,8 +120,10 @@ export default function Product(){
                 <Text h1> {foundSite?.title}</Text>
               </Row>
               <Row>
-                Descriptio:
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi veniam neque, earum ullam rem quia, officiis ut adipisci eaque culpa quod aliquam beatae? Laboriosam, asperiores. Nesciunt inventore eum facilis?
+                Descrição:
+              </Row>
+              <Row>
+                <Text>{foundSite?.description}</Text>
               </Row>
 
               <Row css={{mt:20,mb:20}}>
@@ -85,7 +132,7 @@ export default function Product(){
                 </Text>
               </Row>
               <Row>
-                <Button  shadow onPress={()=>{BuyProduct(foundSite?.idPrice as string)}}>
+                <Button  shadow onPress={()=>{BuyProduct(idPrice)}}>
                   Comprar
                 </Button>
               </Row>

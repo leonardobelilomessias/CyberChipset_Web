@@ -1,18 +1,18 @@
 import { Button, NavbarToggleProps, Row, styled } from "@nextui-org/react"
-import {Navbar,Text,Link, Image,Col,} from '@nextui-org/react'
+import {Navbar,Text,Link,Col,} from '@nextui-org/react'
 import Logo from '../../../public/images/logo.png'
 import Linker from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import React from "react";
 import { User } from "phosphor-react";
+import Image from "next/image";
 
 
 const BoxMenu =styled("div",{
   color:"black",
-
   alignContent:"center",
-  justifyContent:"center",
+  justifyContent:"space-between",
   display:"flex",
   flex:1,
   mw:50,
@@ -41,6 +41,23 @@ const BoxMenu =styled("div",{
     p:"$1"
   }
 })
+const BoxImage = styled("div",{
+
+  width: "80%",
+  height:"2.3rem",
+  position:"relative",
+  justifyContent:"center",
+  alignItems:"center",
+  alignContent:"center",
+
+
+  "@md":{
+
+    
+  }
+
+
+})
 
 export function AppNavbar(){
   const pathname = usePathname();
@@ -49,7 +66,7 @@ export function AppNavbar(){
     {title:"Pagina Inicial",link:"/"},
     {title:"Serviços",link:"/services"},
     {title:"Preços",link:"/price"},
-    {title:"Blog",link:"/blog"},
+    {title:"Login",link:"/login"},
     {title:"Contato",link:"/contact"},
 
   ];
@@ -71,9 +88,13 @@ export function AppNavbar(){
     
 
     <Navbar  variant={"static"}  css={{ backgroundColor:"transparent",boxSizing:"border-box", width:"100vw"}} >
-    <Navbar.Brand css={{  display:"flex",flex:1, backgroundColor:"white",boxSizing:"border-box","@sm":{ flex:0 }}} >
-      <Navbar.Toggle  isSelected={showMenu}  onClick={()=>setShowMenu(!showMenu)}   showIn={"xs"}/>
-      <Image objectFit='contain' width={200}  src={Logo.src}/>
+    <Navbar.Brand css={{  display:"flex",flex:1,boxSizing:"border-box","@sm":{ flex:0 }}} >
+      <Navbar.Toggle  css={{mr:"25vw"}} isSelected={showMenu}  onClick={()=>setShowMenu(!showMenu)}   showIn={"xs"}/>
+      <BoxImage>
+        <Row align="center" css={{w:"8rem",h:"2.3rem",}}>
+        <Image alt="logo" fill src={Logo.src}/>
+        </Row>
+      </BoxImage>
     </Navbar.Brand>
       <Navbar.Collapse  isOpen={!!showMenu}>
         {collapseItems.map((item) => (
@@ -108,7 +129,7 @@ export function AppNavbar(){
               </BoxMenu>
               
               <BoxMenu isActive={pathname==="/price"}>
-              <Linker href={"/price"}>
+              <Linker href={"/#price"}>
                 Preços
               </Linker>
               </BoxMenu>
