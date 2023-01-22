@@ -62,7 +62,7 @@ export default function Index({products}:ProductsProps) {
     </>
   )
 }
-export const getStaticProps: GetStaticProps= async ()=> {
+export const getServerSideProps: GetServerSideProps= async ()=> {
   const response = await stripe.products.list({expand:["data.default_price"]})
   const products = response.data.map(product=>{
     

@@ -1,10 +1,11 @@
 import { Button, Col, Container, Grid, Row, Spacer, Text } from "@nextui-org/react";
+import { useRouter } from "next/router";
  
 import { useEffect, useState } from "react";
 import { clearInterval } from "timers";
 import Background from '../../../public/images/back.jpg'
 export function InfoAbouteSites(){
-
+  const {push} = useRouter()
   return(
     <>
     <Container id="viu">
@@ -57,7 +58,7 @@ export function InfoAbouteSites(){
                         <Text data-aos="fade-up" data-aos-once="true" size={"$5xl"} weight={"bold"} color="$purple700" css={{lineHeight:1, textShadow:"10px 10px 10px gray","@md":{
                           fontSize:"$8xl"
                         }}} >
-                        R$ 182 bilhões
+                        R$182 bilhões
                         </Text>
                       </Row>
                       <Row justify="center">
@@ -85,8 +86,8 @@ export function InfoAbouteSites(){
 
       <Grid xs={12}>
       <Row css={{ p:5}} justify={"center"}>
-        <Button shadow color="secondary" bordered size={"lg"} css={{}}>
-          Click aqui
+        <Button shadow color="secondary" bordered size={"lg"} onPress={()=>{push("https://pagar.me/blog/ecommerce-no-brasil")}} css={{}}>
+          Saiba mais
         </Button>
       </Row>
       </Grid>

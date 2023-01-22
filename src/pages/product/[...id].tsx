@@ -7,7 +7,7 @@ import PhotoProduct from '../../../public/images/bic.jpg'
 const InfoSites = [
   {
     id:"1",
-    title:"Site instituncional Premium",
+    title:"Site institucional Premium",
     price:"1290,00",
     idPrice:"price_1MSQ9ACVpoIEs3Kjrl5BflAQ",
     description:
@@ -38,7 +38,7 @@ const InfoSites = [
   },
   {
     id:"3",
-    title:"Site instituncional POP",
+    title:"Site institucional POP",
     price:"790,00",
     idPrice:"price_1MSQ9OCVpoIEs3KjjP42eQUF",
     description:
@@ -115,7 +115,7 @@ export default function Product(){
             </BoxImage>
           </Grid>
           <Grid md={6} sm={12} justify="center">
-            <Col css={{pt:"$12",mw:"40rem"}}>
+            <Col css={{pt:"$12",pb:"$20",mw:"40rem"}}>
               <Row >
                 <Text h1> {foundSite?.title}</Text>
               </Row>

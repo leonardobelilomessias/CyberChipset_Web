@@ -70,7 +70,7 @@ export function CardItemHome(item:itemInfoPros){
 
 <Card.Footer css={{alignContent:"flex-end",justifyContent:"flex-end"}}>
 
-    <Text b color="secondary">→ Detalhes</Text>
+   {/* <Text b color="secondary">→ Detalhes</Text>*/}
 
 </Card.Footer>
 </Card>
