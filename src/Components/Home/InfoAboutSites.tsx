@@ -77,7 +77,7 @@ export function InfoAbouteSites(){
         <Text  b size={"$3xl"} css={{lineHeight:1.1, backgroundColor:"",textAlign:"center"}} >
          <Spacer y={2}/>
 
-          Tendencia mundial Um levantamento interno da Linx revela que as vendas omnichannel cresceram 20% no primeiro semestre de 2022, em comparação com o mesmo período do ano anterior. 
+          Tendência mundial Um levantamento interno da Linx revela que as vendas omnichannel cresceram 20% no primeiro semestre de 2022, em comparação com o mesmo período do ano anterior. 
         </Text>
         </Row>
         </Col>

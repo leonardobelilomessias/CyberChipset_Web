@@ -17,7 +17,21 @@ export interface ProductsProps{
 export function PricesPopHome({products}:ProductsProps){
   const {push} = useRouter()
 
-  const [ecom, site] = products
+  const models = products.filter(product=>{
+    if(product.name.includes("POP")){
+      return product
+    }
+  })
+  const site = models.find( product => {
+    if(product.name.includes("Site")){
+      return product
+    }
+  })
+  const ecom = models.find( product => {
+    if(product.name.includes("Ecommerce")){
+      return product
+    }
+  })
  
   return(
 
@@ -70,7 +84,7 @@ export function PricesPopHome({products}:ProductsProps){
                           
                           <Text size={16} css={{ textAlign:"center", background:"", m:0}}>
                           De <Text del >879,90</Text>  por </Text>
-                          <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}></Text> {new Intl.NumberFormat('pt-br',{currency:"BRL",style:"currency"}).format(site.price)}</Text>
+                          <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}></Text>  {new Intl.NumberFormat("pt-BR",{style:"currency",currency: 'BRL' })?.format(site?.price as number)}</Text>
                         </Col>
                     </Card.Body>
                     
@@ -78,7 +92,7 @@ export function PricesPopHome({products}:ProductsProps){
                     <Card.Footer>
                     <Row justify="center">
                       
-                      <Button color={"secondary"} onPress={()=>{ push(`/product/3?idPrice=${site.idPrice}`)}}>Quero esse</Button>
+                      <Button color={"secondary"} onPress={()=>{ push(`/product/3?idPrice=${site?.idPrice}`)}}>Quero esse</Button>
              
                       </Row>
                     </Card.Footer>
@@ -110,7 +124,7 @@ export function PricesPopHome({products}:ProductsProps){
                             
                             <Text size={16} css={{ textAlign:"center", background:"", m:0}}>
                             De <Text del >2369,90</Text>  por </Text>
-                            <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}></Text>{new Intl.NumberFormat('pt-br',{currency:"BRL",style:"currency"}).format(ecom.price)}</Text>
+                            <Text  weight={"bold"} size={30} css={{  textAlign:"center"}}> <Text b size={20}></Text> {new Intl.NumberFormat("pt-BR",{style:"currency",currency: 'BRL' })?.format(ecom?.price as number)}</Text>
                           </Col>
                       </Card.Body>
                       
@@ -118,7 +132,7 @@ export function PricesPopHome({products}:ProductsProps){
                       <Card.Footer>
                        
                       <Row justify="center">
-                          <Button color={"secondary"} onPress={()=>{ push(`/product/4?idPrice=${ecom.idPrice}`)}} >Quero esse</Button>
+                          <Button color={"secondary"} onPress={()=>{ push(`/product/4?idPrice=${ecom?.idPrice}`)}} >Quero esse</Button>
                         </Row>
                         
                       </Card.Footer>

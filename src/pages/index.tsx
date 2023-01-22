@@ -14,7 +14,7 @@ import { QuestionAnswers } from '../Components/Home/QuentionsAnswers'
 import { SolutionCustumer } from '../Components/Home/SolutionCustumer'
 import { PricesPremiumHome } from '../Components/Home/PricesPremiumHome'
 import { PricesPopHome } from '../Components/Home/PricesPopHome'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 const inter = Inter({ subsets: ['latin'] })
 
 export interface ProductsProps{
@@ -62,9 +62,10 @@ export default function Index({products}:ProductsProps) {
     </>
   )
 }
-export const getStaticProps:GetStaticProps = async ()=> {
+export const getStaticProps: GetStaticProps= async ()=> {
   const response = await stripe.products.list({expand:["data.default_price"]})
   const products = response.data.map(product=>{
+    
     const prices = product.default_price as Stripe.Price
     return{
       id:product.id,
@@ -77,7 +78,7 @@ export const getStaticProps:GetStaticProps = async ()=> {
   return {
     props: {
      products
-    }, 
-    revalidate: 60 * 60 *2
+    },  
+    revalidate:60*60*2
   }
 }

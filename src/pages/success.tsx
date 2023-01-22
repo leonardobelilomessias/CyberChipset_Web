@@ -14,7 +14,7 @@ interface SuccessProps{
 }
 export default function Success({custumerName,product}:SuccessProps){
   if(product.payment_status ==="paid"){
-    console.log("pago")
+    
   }
   const {push} = useRouter()
   return(

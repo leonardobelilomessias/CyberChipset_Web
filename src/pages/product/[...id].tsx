@@ -95,7 +95,7 @@ export default function Product(){
 
       const response = await  axios.post('/api/checkout',{priceId})
       const {checkoutUrl} = response.data
-      console.log(response.data)
+      
       window.location.href = checkoutUrl
     }catch{
         alert("falha ao direcionar para o check out")

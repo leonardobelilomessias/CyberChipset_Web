@@ -114,9 +114,7 @@ export  function Hero(){
       </Text>
       </Row>
       <Spacer y={2}/>
-      <Row align="center" justify="center">
-        <Button  shadow  color={"secondary"}   size="xl" >VER EXEMPLOS </Button>
-      </Row>
+
 
       <Spacer  />
     </BoxText >

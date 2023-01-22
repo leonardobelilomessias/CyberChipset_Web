@@ -80,7 +80,7 @@ export function ConsultHome(){
   !mensage?setStateMensage(false):setStateMensage(true)
   setLang(!lang)
   
-  console.log(stateEmail,stateMensage,stateName,statenumber)
+
 }
 useEffect(()=>{
   setInfoApi({} as InfoApi)
