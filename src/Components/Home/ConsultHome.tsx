@@ -120,7 +120,7 @@ useEffect(()=>{
                 
 
                   <Grid  md={5}>
-                              <Grid.Container gap={3}data-aos="fade-left"  data-aos-once="true" >
+                              <Grid.Container gap={3} >
                                   <Grid>
 
                                       <Text color="secondary" b size={"$2xl"}>

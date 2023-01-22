@@ -49,8 +49,8 @@ export default function Index({products}:ProductsProps) {
       <Process/>
       <ConsultHome/>
       
-{   <FeatureBusiness/>
-    }
+   <FeatureBusiness/>
+    
     <SolutionCustumer/>
     <InfoAbouteSites/>
     <PricesPremiumHome products={products} />
