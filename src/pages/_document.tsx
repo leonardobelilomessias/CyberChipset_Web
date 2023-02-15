@@ -14,7 +14,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="pt">
       <Head>
       <meta name="google-site-verification" content="qVqrRp8FIhZgp0IQ77TSSkw00XOa2o_NXO1XiGxM5co" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
